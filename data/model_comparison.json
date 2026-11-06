@@ -1,0 +1,65 @@
+{
+  "version": "2026.11",
+  "as_of": "2026-11-06",
+  "note": "Only what each lab has published. null means not publicly documented. No latency figures are included because none of these labs publish comparable, independently measured numbers.",
+  "maintainer_site": "https://dessavoiceai.org/",
+  "models": [
+    {
+      "name": "Block Dessa",
+      "developer": "Block, Inc.",
+      "architecture": "End-to-end speech-to-speech: audio in, audio out, no text",
+      "training_data": "Only human conversation audio; no text, no pretrained models",
+      "training_compute": "One NVIDIA GB200 NVL72",
+      "full_duplex": true,
+      "local_inference": "Faster than real time on a MacBook Pro M4 Max or better (per Block)",
+      "weights": "Not released",
+      "availability": "Research preview; waitlist",
+      "sources": ["https://block.xyz/dessa"]
+    },
+    {
+      "name": "Sesame CSM",
+      "developer": "Sesame",
+      "architecture": "Llama backbone plus audio decoder; speech from text and context",
+      "training_data": "About 1M hours of transcribed public audio, mostly English",
+      "training_compute": null,
+      "full_duplex": false,
+      "local_inference": "CSM-1B base model runs on your own GPU",
+      "weights": "CSM-1B base, Apache 2.0",
+      "availability": "Research preview app; CSM-1B code on GitHub",
+      "sources": [
+        "https://www.sesame.com/research/crossing_the_uncanny_valley_of_voice",
+        "https://github.com/SesameAILabs/csm"
+      ]
+    },
+    {
+      "name": "OpenAI GPT-Live-1",
+      "developer": "OpenAI",
+      "architecture": "Full-duplex voice model; delegates reasoning to a backend model",
+      "training_data": null,
+      "training_compute": null,
+      "full_duplex": true,
+      "local_inference": null,
+      "weights": "Hosted API only",
+      "availability": "OpenAI API since 2026-09-10; $0.05 per minute",
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-live-1",
+        "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+      ]
+    },
+    {
+      "name": "Kyutai Moshi",
+      "developer": "Kyutai",
+      "architecture": "Speech-text model: 7B Temporal Transformer, Depth Transformer, Mimi codec",
+      "training_data": "Helium text LLM init; 7M audio hours; Fisher; synthetic dialogues",
+      "training_compute": null,
+      "full_duplex": true,
+      "local_inference": "MLX version runs on Mac",
+      "weights": "Open weights, CC-BY 4.0",
+      "availability": "Open source on GitHub and Hugging Face; demo at moshi.chat",
+      "sources": [
+        "https://arxiv.org/abs/2410.00037",
+        "https://github.com/kyutai-labs/moshi"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Audio and renders stay local: the official recordings belong to Block, Inc.
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.mp4
+assets/waveforms/*
+!assets/waveforms/.gitkeep
+
+__pycache__/
+.venv/
